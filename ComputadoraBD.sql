@@ -18,3 +18,23 @@ insert into COMPUTADORA values ('HP Pavilion All-in-One', 'PC todo en uno para e
 insert into COMPUTADORA values ('Dell Precision 7550', 'Estación de trabajo móvil para profesionales creativos', 3200, '2023-11-06 19:47:29');
 select* from COMPUTADORA
 
+CREATE TABLE USUARIOCOM (
+IDUSUARIO INT IDENTITY (1,1) NOT NULL,
+IDCOMPUTADORA INT NOT NULL,
+NOMBREUSER NVARCHAR (50) NOT NULL,
+CONTRASEÑA NVARCHAR (50) NOT NULL,
+FECHAREG DATETIME NOT NULL,
+PRIMARY KEY (IDUSUARIO),
+FOREIGN KEY (IDCOMPUTADORA) REFERENCES COMPUTADORA (IDCOMPUTADORA)
+);
+insert into USUARIOCOM values (1, 'pedro', '6841', '2022-01-12 14:47:29');
+insert into USUARIOCOM values (3, 'alejandro', '9189', '2022-03-10 17:40:29');
+insert into USUARIOCOM values (5, 'bruno', '2664', '2022-02-11 08:30:29');
+insert into USUARIOCOM  values (6, 'carla', '7655', '2023-06-08 19:48:00');
+insert into USUARIOCOM values (8, 'sebastian', '9048', '2023-12-07 10:15:20');
+insert into USUARIOCOM values (4, 'ana', '5539', '2022-03-12 13:47:12');
+insert into USUARIOCOM values (10, 'roberto', '7655', '2024-03-10 17:40:29');
+insert into USUARIOCOM values (7, 'esther', '7233', '2022-04-10 21:47:08');
+select* from COMPUTADORA
+ select* from USUARIOCOM
+

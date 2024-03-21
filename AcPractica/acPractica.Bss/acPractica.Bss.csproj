@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\acPractica.Dal\acPractica.Dal.csproj" />
+    <ProjectReference Include="..\acPractica.Modelos\acPractica.Modelos.csproj" />
+  </ItemGroup>
+
 </Project>
